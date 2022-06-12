@@ -33,6 +33,9 @@ Updated file: /Users/person/git/pptx-sanitiser/pptx/example.pptx 👌
 
 - :warning: **Files are updated in situ** so make sure you copy the ```pptx``` files into the ```pptx-sanitiser folder``` rather than moving them
 
+- :warning: Text is updated by replacing all alphanumeric characters with the character ```x```. This means that spaces are preserved, along with any other characters (#, @, etc.). If your content is extremely sensitive - or can be guessed from word lengths alone - this tool will not be suitable.
+
 - :warning: Images are not sanitised during this process so make sure that you check each processed file for images (in the slides or master)
 
-- :warning: Text within SmartArt
+- :warning: Text within SmartArt is not updated during the process, so make sure you check for SmartArt in the processed files.
+
