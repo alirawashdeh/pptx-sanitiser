@@ -64,7 +64,7 @@ namespace ConsoleApplication
                     SlideId slideId = (SlideId)slideIds[i];
                     String? relId = slideId.RelationshipId;
                     
-                    if(slideId.RelationshipId != null)
+                    if(relId != null)
                     {
                         // Get the slide part from the relationship ID.
                         SlidePart slide = (SlidePart) part.GetPartById(relId);
