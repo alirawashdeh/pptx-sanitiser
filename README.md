@@ -31,7 +31,7 @@ Updated file: /Users/person/git/pptx-sanitiser/pptx/example.pptx 👌
 
 ## Warnings
 
-- :warning: **Files are updated in situ** so make sure you copy the ```pptx``` files into the ```pptx-sanitiser folder``` rather than moving them
+- :warning: **Files are updated in situ** so make sure you copy the ```pptx``` files into the ```pptx-sanitiser``` folder rather than moving them
 
 - :warning: Text is updated by replacing all alphanumeric characters with the character ```x```. This means that spaces are preserved, along with any other characters (#, @, etc.). If your content is extremely sensitive - or can be guessed from word lengths alone - this tool will not be suitable.
 
