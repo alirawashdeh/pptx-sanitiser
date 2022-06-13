@@ -61,23 +61,22 @@ namespace ConsoleApplication
                 // Update the text on each slide
                 for (int i=0; i<part.SlideParts.Count(); i++)
                 {
-                    String relId = String.Empty;
                     SlideId slideId = (SlideId)slideIds[i];
+                    String? relId = slideId.RelationshipId;
+                    
                     if(slideId.RelationshipId != null)
                     {
-                        relId = slideId.RelationshipId;
-                    }
+                        // Get the slide part from the relationship ID.
+                        SlidePart slide = (SlidePart) part.GetPartById(relId);
 
-                    // Get the slide part from the relationship ID.
-                    SlidePart slide = (SlidePart) part.GetPartById(relId);
-
-                    // Get the inner text of the slide:
-                    IEnumerable<A.Text> texts = slide.Slide.Descendants<A.Text>();
-                    
-                    foreach (A.Text text in texts)
-                    {
-                        Regex pattern = new Regex("[A-Za-z0-9]");
-                        text.Text = ObfuscateText(text.Text);
+                        // Get the inner text of the slide:
+                        IEnumerable<A.Text> texts = slide.Slide.Descendants<A.Text>();
+                        
+                        foreach (A.Text text in texts)
+                        {
+                            Regex pattern = new Regex("[A-Za-z0-9]");
+                            text.Text = ObfuscateText(text.Text);
+                        }
                     }
                 }
             }
