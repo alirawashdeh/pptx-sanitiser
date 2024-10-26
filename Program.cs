@@ -52,7 +52,10 @@ namespace ConsoleApplication
                 ppt.PackageProperties.Category = null;
                 ppt.PackageProperties.Keywords = null;
                 ppt.PackageProperties.Title = null;
-                ppt.PackageProperties.LastModifiedBy = ObfuscateText(ppt.PackageProperties.LastModifiedBy);
+                if(ppt.PackageProperties.LastModifiedBy != null)
+                {
+                    ppt.PackageProperties.LastModifiedBy = ObfuscateText(ppt.PackageProperties.LastModifiedBy);
+                }
                 if(ppt.ExtendedFilePropertiesPart != null) 
                 {
                     ppt.ExtendedFilePropertiesPart.Properties = new DocumentFormat.OpenXml.ExtendedProperties.Properties();
