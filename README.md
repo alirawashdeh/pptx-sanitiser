@@ -6,7 +6,7 @@ Quickly and easily obfuscate the text in one or more Powerpoint files (PPTX only
 
 # Installation
 
-Ensure that .Net Core 3.1 is installed, then carry out the following steps:
+Ensure that .Net 8.0 is installed, then carry out the following steps:
 
 ```
 git clone https://github.com/alirawashdeh/pptx-sanitiser.git
